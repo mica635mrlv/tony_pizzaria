@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,ol,li{
+    list-style: none;
+}
+body{
+    padding: 0 80px;
+
+}
+ header{
+    background-color: tomato;
+    height: 60px;
+    position: fixed;
+    width: calc(100% - 160px);
+    top: 60px;
+ }
+ main{
+    background-color: blueviolet;
+    height: 500px;
+ }
+ footer{
+    background-color: pink;
+    height: 526px;
+ }
