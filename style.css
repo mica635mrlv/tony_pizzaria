@@ -1,7 +1,7 @@
 :root{
     --primary-color: #F07807;
     --secundary-color: #F7E5D8;
-    --terciary-color: #fbddc1;
+    --terciary-color: #fef2e7;
 }
 *{
     padding: 0;
@@ -20,7 +20,7 @@ ul,ol,li{
 body{
     padding: 0 80px;
     font-family: "Poppins", sans-serif;
-    background-attachment: var(--secundary-color);
+    background-color: var(--terciary-color);
 }
  header{
     height: 60px;
@@ -46,14 +46,18 @@ header li{
     width: 120px;
     border-radius: 12px;
     border: none;
-    background-color: #fbddc1;
+    background-color: var(--secundary-color);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
+    color: #F07807;
+    font-weight: bold;
+    box-shadow: 0 3px 3px #0005;
+    
 }
 header li:hover{
-    background-color: ;
+    background-color: var(--secundary-color);
     box-shadow: 0 3px 3px #0005;
 }
  main{
