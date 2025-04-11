@@ -1,38 +1,39 @@
 :root{
     --primary-color: #F07807;
     --secundary-color: #F7E5D8;
-    --terciary-color: #fef2e7;
+    --default-shadow: 0 4px 8px #0008;
+    --default-padding:0 80px;
 }
 *{
     padding: 0;
     margin: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
-
 a{
     text-decoration: none;
     color: inherit;
 }
-
 ul,ol,li{
     list-style: none;
 }
 body{
-    padding: 0 80px;
     font-family: "Poppins", sans-serif;
-    background-color: var(--terciary-color);
+    background-color: var(--secundary-color);
 }
- header{
-    height: 60px;
+header{
     position: fixed;
-    width: calc(100% - 160px);
+    height: 60px;
+    width:100vw;
     top: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
- }
-header ul{
-    display:flex;
+    padding: var(--default-padding);
+}
+
+header menu{
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 48px;
     font-size: 1rem;
@@ -41,30 +42,117 @@ header li{
     padding: 4px 8px;
     transition: .5s;
 }
+header li:hover{
+    background-color: var(--secundary-color);
+    box-shadow: var(--default-shadow);
+}
 .login{
     height: 48px;
     width: 120px;
     border-radius: 12px;
     border: none;
     background-color: var(--secundary-color);
+    box-shadow: var(--default-shadow);
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: 8px;
-    color: #F07807;
-    font-weight: bold;
-    box-shadow: 0 3px 3px #0005;
+}
+main{
     
 }
-header li:hover{
-    background-color: var(--secundary-color);
-    box-shadow: 0 3px 3px #0005;
+section{
+    height: 100vh;
+    padding: var(--default-padding);
 }
- main{
-    /*background-color: blueviolet;*/
-    height: 500px;
- }
- footer{
+.home{
+    background-color: var(--secundary-color);
+    background-image: url(./img/background.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+}
+.conteiner-slogan{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 64px;
+}
+.slogan{
+    position: relative;
+    bottom: 90px;
+    width: 560px;
+    font-size: 4rem;
+    font-weight: 400;
+    font-style: italic;
+}
+.slogan span{
+    color: #F07807;
+}
+.conteiner-pizzas{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+.pizza{
+    position: relative;
     background-color: pink;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.add-pizza{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 12px;
+    border: 4px solid white;
+    font-size: 2rem;
+    display: grid;
+    transition: .5s;
+    place-content: center;
+    opacity: 0;
+    z-index: 9;
+}
+.pizza:hover .add-pizza{
+    opacity: 1;
+}
+.conteiner-info{
+    position: absolute;
+    bottom: -36px;
+    height: 36px;
+    width: 100%;
+    background-color: #0008;
+    transition: .5s;
+}
+.conteiner-info span:nth-of-type(1){
+    font-size: 12px;
+    width: 102px;
+    color: white;
+}
+.conteiner-info span:nth-of-type(2){
+    width: 57px;
+    height: 20px;
+    background-color: var(--primary-color);
+    color: white;
+}
+.pizza:hover .conteiner-info{
+    bottom: 0;
+}
+.cardapio{
+    background-color: palevioletred;
+}
+.servicos{
+    background-color: rgb(36, 182, 255);
+}
+footer{
+    background-color: #07f070;
     height: 526px;
- }
+}

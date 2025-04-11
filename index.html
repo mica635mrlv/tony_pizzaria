@@ -2,18 +2,17 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap" rel="stylesheet">   
     <link rel="stylesheet" href="./style.css">
     <title>Tony Pizzaria</title>
 </head>
 <body>
     <header>
-        <img src="img/Logo.svg" alt="logo Tony Pizzaria">
-        <ul>
+        <img src="./img/Logo.svg" alt="logo Tony Pizzaria">
+        <menu>
             <li>
                 <a href="#">Home</a>
             </li>
@@ -29,17 +28,43 @@
             <li>
                 <a href="#">Contato</a>
             </li>
-        </ul>
+        </menu>
         <button type="button" class="login">
-            <img src="img/logo-icon.svg" alt="Icone usuário">
+            <img src="./img/logo-icon.svg" alt="Icone usuário">
             <span>LOGIN</span>
         </button>
     </header>
     <main>
-
+        <section class="home">
+            <div class="conteiner-slogan">
+                <h2 class="slogan">
+                    Não é apenas uma <span>Pizza</span>, é uma experiência!
+                </h2>
+                <img src="./img/pizza-img.svg" alt="Pizza">
+            </div>
+            <div class="conteiner-pizzas">
+                <div class="pizza">
+                    <div class="add-pizza">+</div>
+                    <img src="./img/1-pizza.svg" alt="Pizza"> 
+                    <div class="conteiner-info">
+                        <span>Pizza de calabreza com queijo</span>
+                        <span>R$ 16,00</span>
+                    </div> 
+                </div>
+                <div class="pizza">
+                    <img src="./img/2-pizza.svg" alt="Pizza">  
+                </div>
+                <div class="pizza">
+                    <img src="./img/3-pizza.svg" alt="Pizza">  
+                </div>
+                <div class="pizza">
+                    <img src="./img/2-pizza.svg" alt="Pizza">  
+                </div>
+            </div>
+        </section>
+        <section class="cardapio"></section>
+        <section class="servicos"></section>
     </main>
-    <footer>
-
-    </footer>
+    <footer></footer>
 </body>
 </html>
