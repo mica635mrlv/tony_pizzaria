@@ -1,29 +1,36 @@
-:root{
+:root {
     --primary-color: #F07807;
     --secundary-color: #F7E5D8;
     --default-shadow: 0 4px 8px #0008;
-    --default-padding:0 80px;
+    --default-padding: 0 80px;
 }
-*{
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-a{
+
+a {
     text-decoration: none;
     color: inherit;
 }
-ul,ol,li{
+
+ul,
+ol,
+li {
     list-style: none;
 }
-body{
+
+body {
     font-family: "Poppins", sans-serif;
     background-color: var(--secundary-color);
 }
-header{
+
+header {
     position: fixed;
     height: 60px;
-    width:100vw;
+    width: 100vw;
     top: 60px;
     display: flex;
     justify-content: space-between;
@@ -31,22 +38,25 @@ header{
     padding: var(--default-padding);
 }
 
-header menu{
+header menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 48px;
     font-size: 1rem;
 }
-header li{
+
+header li {
     padding: 4px 8px;
     transition: .5s;
 }
-header li:hover{
+
+header li:hover {
     background-color: var(--secundary-color);
     box-shadow: var(--default-shadow);
 }
-.login{
+
+.login {
     height: 48px;
     width: 120px;
     border-radius: 12px;
@@ -58,14 +68,15 @@ header li:hover{
     align-items: center;
     gap: 8px;
 }
-main{
-    
-}
-section{
+
+main {}
+
+section {
     height: 100vh;
     padding: var(--default-padding);
 }
-.home{
+
+.home {
     background-color: var(--secundary-color);
     background-image: url(./img/background.svg);
     background-repeat: no-repeat;
@@ -74,13 +85,15 @@ section{
     display: grid;
     grid-template-rows: 3fr 1fr;
 }
-.conteiner-slogan{
+
+.conteiner-slogan {
     display: flex;
     justify-content: center;
     align-items: end;
     gap: 64px;
 }
-.slogan{
+
+.slogan {
     position: relative;
     bottom: 90px;
     width: 560px;
@@ -88,26 +101,35 @@ section{
     font-weight: 400;
     font-style: italic;
 }
-.slogan span{
+
+.slogan span {
     color: #F07807;
 }
-.conteiner-pizzas{
+
+.conteiner-produtos {
     justify-content: space-between;
     display: flex;
     align-items: center;
 }
-.pizza{
+
+.pizza {
     position: relative;
-    background-color: pink;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
     border-radius: 12px;
-    overflow: hidden;
 }
-.add-pizza{
+
+.overflow {
     position: absolute;
-    top: 0px;
-    right: 0px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.add-pizza {
+    position: absolute;
+    top: -16px;
+    right: -16px;
     width: 40px;
     height: 40px;
     background-color: var(--primary-color);
@@ -121,38 +143,135 @@ section{
     opacity: 0;
     z-index: 9;
 }
-.pizza:hover .add-pizza{
+
+.pizza:hover .add-pizza {
     opacity: 1;
+    cursor: pointer;
 }
-.conteiner-info{
+
+.conteiner-info {
     position: absolute;
     bottom: -36px;
     height: 36px;
     width: 100%;
     background-color: #0008;
     transition: .5s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
 }
-.conteiner-info span:nth-of-type(1){
-    font-size: 12px;
+
+.conteiner-info span:nth-of-type(1) {
+    font-size: 10px;
     width: 102px;
     color: white;
 }
-.conteiner-info span:nth-of-type(2){
+
+.conteiner-info span:nth-of-type(2) {
     width: 57px;
     height: 20px;
     background-color: var(--primary-color);
     color: white;
+    font-size: 12px;
 }
-.pizza:hover .conteiner-info{
+
+.pizza:hover .conteiner-info {
     bottom: 0;
 }
-.cardapio{
-    background-color: palevioletred;
+
+.cardapio {
+    background-color: white;
 }
-.servicos{
+
+.cardapio-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-bottom: 2px solid var(--primary-color);
+    height: 250px;
+}
+
+.section-title {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.section-title h3 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.item-text {
+    display: flex;
+    justify-content: space-between;
+    color: var(--primary-color);
+}
+
+.item-text h4,
+.item-text a {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.cardapio-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-bottom: 2px solid var(--primary-color);
+    height: 250px;
+}
+
+.cardapio-item:last-child {
+    border: none;
+}
+
+.item-menu {
+    display: flex;
+    justify-content: space-between;
+    color: var(--primary-color);
+}
+
+.item-menu h4,
+.item-menu a {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.bebida {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+
+.bebida :hover {
+    box-shadow: 0 0 16px #999;
+}
+
+.bebida p {
+    width: 100%;
+}
+
+.bebida .preço {
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.bebidas .descricao {
+    font-size: 0.8rem;
+}
+
+.servicos {
     background-color: rgb(36, 182, 255);
+    padding: var(--default-padding);
 }
-footer{
+
+footer {
     background-color: #07f070;
     height: 526px;
 }
