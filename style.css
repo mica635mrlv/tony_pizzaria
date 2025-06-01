@@ -22,6 +22,10 @@ li {
     list-style: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
 
     font-family: "Poppins", sans-serif;
@@ -29,14 +33,15 @@ body {
 }
 
 header {
-    height: 60px;
     position: fixed;
     width: 100vw;
+    height: 60px;
     top: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: var(--default-padding);
+    z-index: 999;
 }
 
 header menu {
@@ -63,11 +68,13 @@ header li:hover {
     border-radius: 12px;
     border: none;
     background-color: var(--secundary-color);
-    box-shadow: var(--default-shadow);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
+    font-weight: bold;
+    box-shadow: var(--default-shadow);
+    color: var(--primary-color);
 }
 
 section {
@@ -94,9 +101,9 @@ section {
 
 .slogan {
     position: relative;
-    bottom: 100px;
-    font-size: 4rem;
+    bottom: 10px;
     width: 560px;
+    font-size: 4rem;
     font-weight: 400;
     font-style: italic;
 }
@@ -168,9 +175,9 @@ section {
 }
 
 .container-info span:nth-of-type(2) {
+    height: 20px;
     font-size: 12px;
     width: 57px;
-    height: 20px;
     background-color: var(--primary-color);
     color: white;
 }
@@ -200,8 +207,8 @@ section {
 
 .section-title {
     display: flex;
-    align-items: center;
     gap: 24px;
+    align-items: center;
 }
 
 .section-title h3 {
@@ -231,7 +238,7 @@ section {
 }
 
 .bebida:hover {
-    box-shadow: 0 0 16px #bbb;
+    box-shadow: 0 0 16px #999;
 }
 
 .bebida p {
@@ -250,6 +257,7 @@ section {
 
 .servicos {
     background-color: var(--secundary-color);
+    padding: var(--default-padding);
     height: auto;
     padding-block: 40px;
     display: flex;
@@ -297,7 +305,7 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    color: #FFF;
+    color: #fff;
 }
 
 .contatos-container {
@@ -357,4 +365,109 @@ footer {
     display: grid;
     place-content: center;
     border-top: 2px solid var(--secundary-color);
+}
+
+/*responsividade para tablet*/
+@media (max-width:1024px) {
+    :root {
+        --default-padding: 0 48px;
+    }
+
+    header {
+        position: absolute;
+        left: 0;
+        top: 64px;
+        background-color: transparent;
+    }
+
+    header menu {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 64px;
+        background-color: var(--primary-color);
+        color: #fff;
+        justify-content: space-evenly;
+    }
+
+    header li:hover {
+        color: var(--primary-color);
+    }
+
+    .home {
+        grid-template-rows: none;
+    }
+
+    .home .container-produtos {
+        display: none;
+    }
+
+    .cardapio-item {
+        border: none;
+    }
+
+    .container-slogan {
+        flex-direction: column-reverse;
+        gap: 80px;
+        align-items: center;
+    }
+
+    .container-slogan .slogan {
+        width: 90%;
+        font-size: 72.5px;
+    }
+
+    .container-produtos {
+        gap: 32px;
+    }
+
+    .pizza {
+        width: 100%;
+    }
+    
+    .pizza:nth-child(3),
+    .pizza:nth-child(4),
+    .pizza:nth-child(5) {
+        display: none;
+    }
+
+    .servicos-container {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .servico-item {
+        height: 260px;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .servico-item p {
+        width: 330px;
+    }
+
+    .contatos-container {
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .contato {
+        padding: 0;
+    }
+
+    .contato:nth-child(2) {
+        display: none;
+    }
+
+    .copy-right {
+        margin-bottom: 64px;
+
+    }
+
 }
