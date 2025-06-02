@@ -471,3 +471,162 @@ footer {
     }
 
 }
+
+/*responsividade para mobile*/
+@media (max-width: 768px) {
+  header {
+    top: 20px;
+    padding: 0 10px;
+  }  
+
+  header img:first-of-type {
+    display: none;
+  }
+
+  header::before {
+    margin: 8px;
+    content: "";
+    width: 130px;
+    height: 50px;
+    background-image: url("./img/logo-branco.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  header button img:last-of-type {
+    display: inline;
+  }
+
+  header menu {
+    gap: 0;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .home {
+    background-color: var(--primary-color);
+    background-image: url(./img/background-mobile.png);
+    background-size: cover;
+    height: 676px;
+  }
+
+  .home .container-slogan {
+    color: #fff;
+    align-items: start;
+    justify-content: end;
+    padding-bottom: 50px;
+    width: 275px;
+  }
+
+  .home .container-slogan img {
+    display: none;
+  }
+
+  .home h2 span {
+    color: var(--primary-color);
+    background-color: #fff;
+  }
+
+  .home .container-slogan h2 {
+    font-size: 35px;
+  }
+
+  .home .container-slogan h2 span::after {
+     content: "\A";
+     white-space: pre;
+  }
+
+  .cardapio {
+    height: auto;
+    align-items: center;
+  }
+
+  .cardapio .section-title {
+    padding-top: 40px;
+  }
+
+  .cardapio-item {
+    align-items: center;
+    height: auto;
+  }
+
+  .cardapio-item .item-text h4 {
+    font-size: 22px;
+    padding-bottom: 12px;
+  }
+
+  .cardapio-item .item-text h4:nth-child(1) {
+    padding-top: 16px;
+  }
+
+  .cardapio-item .item-text a {
+    display: none;
+  }
+
+  .pizza:nth-child(2),
+  .pizza:nth-child(6) {
+    display: none;
+  }
+
+  .bebida {
+    margin-bottom: 16px;
+  }
+
+  .servicos {
+    gap: 21px;
+  }
+
+  .servicos-container {
+     flex-direction: column;
+     gap: 17px;
+  }
+
+  .servico-item {
+    height: auto;
+    gap: 12px;
+  }
+
+  .servico-item h4 {
+    font-size: 33px;
+  }
+
+  .servico-item p {
+    display: none;
+  }
+
+  footer {
+    height: auto;
+    padding-bottom: 64px;
+  }
+
+  .contatos-container {
+    height: auto;
+    padding-bottom: 72px;
+    padding-top: 56px;
+    gap: 0;
+  }
+
+  .contato-logo {
+    padding-bottom: 45px;
+  }
+
+  .contato:nth-child(3) {
+    align-items: center;
+    padding-bottom: 32px;
+  }
+
+  .social menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  footer .copy-right {
+    padding: 14px 12px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 27px;
+    text-align: center;
+  }
+}
