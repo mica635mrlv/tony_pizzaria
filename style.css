@@ -95,7 +95,8 @@ section {
 .container-slogan {
     display: flex;
     justify-content: center;
-    align-items: end;
+    margin-top: 11rem;
+    align-items: center;
     gap: 64px;
 }
 
