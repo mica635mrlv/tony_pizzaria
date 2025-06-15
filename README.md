@@ -1,7 +1,4 @@
 # TONY-PIZZARIA
-
-![](review.png)
-
 ## Projeto
 
 Projeto de site responsivo criado durante as aulas da disciplina Linguagem de Marcação no curso da escola SENAI Jandira.
